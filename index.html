@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 02</title>
+</head>
+
+<body>
+  <header>
+    <h1>Título de la página</h1>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#acerca">Acerca de</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#contacto">CONECTATE</a>
+    </nav>
+</header>
+<main>
+    <article>
+        <h2>Artículo 1</h2>
+        <p>Contenido del artículo 1.</p>
+    </article>
+    <article>
+        <h2>Artículo 2</h2>
+        <p>Contenido del artículo 2.</p>
+    </article>
+</main>
+<footer>
+    <p>Derechos reservados &copy; 2023</p>
+<img src="logo.png" alt="Logo de la empresa" title="Logo de la
+  empresa">
+<button tabindex="0">Botón de acción</button>
+<div role="alert" aria-live="polite">Mensaje de
+  notificación</div>
+</footer>
+
+
+    <script>
+        /*      function ejercicio1() {
+                 console.log("Paso 1");
+                 paso2();
+                 paso3();
+             }
+             function paso2() {
+                 console.log("Paso 2");
+             }
+             function paso3() {
+                 console.log("Paso 3");
+             }
+             ejercicio1(); */
+        //
+
+        /*    function contadorRecursivo(actual,maximo) {
+               console.log("Actual :" + actual);
+               if(actual >= maximo) {
+                  console.log("Limite alcanzado");
+                  return;
+               }
+               contadorRecursivo(actual + 1, maximo);
+           }
+   
+           contadorRecursivo(1, 5); */
+
+        /*    for (let i = 0; i < 5; i++) {
+               console.log("Iteracion: " + i);
+           } */
+
+        //scope
+        /*   let x = 10;
+  
+          function ejemploScope() {
+              let x = 20;
+  
+              if (true) {
+                  let x = 30;
+                  console.log("Dentro del if: " + x);
+              } // aqui muere el bloque del if
+  
+              console.log("dentro de la funcion: " + x);
+          }
+  
+          ejemploScope();
+          console.log("Fuera de la funcion: " + x); */
+
+        //carrito de compras
+
+        /*       function crearUnCarrito(producto, cantidad) {
+                  let total = 0;
+                  return {
+                      agregarProducto(precio) {
+                          total += precio;
+                          return total;
+                      },
+                      quitarProducto(precio) {
+                          total = Math.max(0, total - precio);
+                          return total;
+                      },
+                      verTotal() {
+                          return total;
+                      },
+                  }
+              }
+              const carrito = crearUnCarrito();
+      
+              carrito.agregarProducto(50);
+              carrito.agregarProducto(30);
+              console.log("Total: " + carrito.verTotal());
+      
+              carrito.quitarProducto(20);
+              console.log("Total después de quitar: " + carrito.verTotal());
+       */
+
+        /*  1.escribe una función que llame a otras 3 funciones en secuencia, donde cada una imprima un mensaje antes de llamar a la siguiente. */
+
+        /*      function paso1() {
+                 console.log("Paso 1");
+                 paso2();
+             }
+     
+             function paso2() {
+                 console.log("Paso 2");
+                 paso3();
+             }
+     
+             function paso3() {
+                 console.log("Paso 3");
+             } */
+
+        /*  paso1(); */
+
+        /* 2.tienes un array de precios. Usa un bucle for clásico para recorrerlo e imprimir cada precio con un 10% de descuento aplicado. */
+
+        /*     const precios = [100, 200, 300, 400, 500];
+    
+            for (let i = 0; i < precios.length; i++) {
+                const precioConDescuento = precios[i] * 0.9;
+                console.log(`Precio original: ${precios[i]}, Precio con descuento: ${precioConDescuento}`);
+            } */
+
+        /*  Js intermedio  */
+        /* console.log("A");
+           setTimeout
+           console.log("B");
+           prom
+           console.log("C");
+           console.log("D"); */
+
+        //promesa
+
+        /*     const miPromesa = new Promise((resolve, reject) => {
+                const exito = true;
+                if (exito) {
+                    resolve("¡La promesa se resolvió con éxito!");
+                } else {
+                    reject("Hubo un error al resolver la promesa.");
+                }
+            });
+    
+            miPromesa
+                .then((resolve) => {
+                    console.log(resolve);
+                })
+                .catch((reject) => {
+                    console.error(reject);
+                }); */
+
+        //setinterval y un settimeout
+        /*  setTimeout(() => {
+                console.log("Esto se ejecuta después de 2 segundos");
+            }, 10000); */
+
+        /*  setInterval(() => {
+              console.log("Esto se ejecuta cada 2 segundos");
+          }, 2000); */
+
+        /*    let contador = 1;
+       
+           const intervalo = setInterval(() => {
+               console.log("Contador: " + contador);
+               contador++;
+               if(contador > 5) {
+                   clearInterval(intervalo);
+                   console.log("Se detuvo el intervalo");
+               }
+           }, 2000); */
+
+        // promesas
+
+        /*    const cargarData = new Promise((resolve) => {
+               setTimeout(() => {
+                   resolve("Datos cargados correctamente");
+               }, 2000);
+           });
+   
+           cargarData
+               .then((mensaje) => {
+                   console.log(mensaje);
+               }); */
+
+        // promeeter muchas promesas
+
+        /*       const cargarUsuarios = new Promise((resolve) => {
+                  setTimeout(() => {
+                      resolve("Todos Usuarios");
+                  }, 2000);
+              })
+      
+              const cargarTarjetas = new Promise((resolve) => {
+                  setTimeout(() => {
+                      resolve("Todos Tarjetas");
+                  }, 3000);
+              })
+      
+              const cargarComentarios = new Promise((resolve) => {
+                  setTimeout(() => {
+                      resolve("Todos comentarios");
+                  }, 5000);
+              })
+      
+              Promise.all([cargarUsuarios, cargarTarjetas, cargarComentarios]).then((resultados) => {
+                  console.log('Todos los resultados cargados', resultados)
+              }) 
+                  */
+
+        //Async await
+        /*      async function cargarUsuarios() {
+                 //SIMULACION DE LLAMADA DE UNA API
+                 const usuarios = await new Promise((resolve) => {
+                     setTimeout(() => {
+                         resolve([
+                             {
+                                 id: 1,
+                                 nombre: 'Pepito',
+                                 email: 'pepito@gmail.com'
+                             },
+                             {
+                                 id: 2,
+                                 nombre: 'Luis',
+                                 email: 'luis@gmail.com'
+                             },
+                         ]);
+                     }, 3000); // 3 segundos
+                 })
+     
+                 return usuarios
+             }
+             //
+             cargarUsuarios().then(resultado => {
+                 console.log('Usuarios', resultado)
+             }) */
+
+        /*         const cargarData = new Promise((resolve) => {
+                    setTimeout(() => {
+                        resolve("Datos cargados correctamente");
+                    }, 2000);
+                });
+        
+                cargarData
+                    .then((mensaje) => {
+                        console.log(mensaje);
+                    }); */
+
+
+        /*       function esperar(segundos) {
+                  return new Promise((resolve) => {
+                      setTimeout(resolve, segundos * 1000);
+                  })
+              }
+      
+              async function pideTuRappi() {
+                  console.log('Tu pedido esta cargando');
+                  await esperar(3)
+                  console.log('Tu pedido ya esta listo ')
+              }
+      
+              pideTuRappi(); */
+
+
+        /*   function obtenerCliente(id) {
+              return new Promise((resolve) => {
+                  setTimeout(() => {
+                      resolve({
+                          id: 2, nombre: 'pepe', edad: 32
+                      })
+                  }, 1000);
+              })
+          }
+  
+          async function mostrarUsuario() {
+              console.log('cargando perfil');
+              const usuario = await obtenerCliente(1)
+              console.log(usuario.nombre)
+              console.log(usuario.edad)
+          }
+  
+          mostrarUsuario() */
+        // js avanzado
+
+        /*  const nombre = 'Juan';
+         const edad = 30;
+         const mensaje = `Hola, me llamo ${nombre} y tengo ${edad} años`; 
+         console.log(mensaje) */
+        /*        const user = {
+                   name: 'Juan',
+                   age: 30,
+                   email: 'juan@example.com',
+                   address: {
+                       city: 'Madrid',
+                       country: 'España'
+                   }
+               };
+       
+               console.log(user.age)
+               console.log(user.email) */
+
+    /*     const numbers = [1, 2, 3];
+        const moreNumbers = [...numbers, 4, 5];
+        console.log(moreNumbers);
+
+        const user = { name: 'Juan', age: 30 };
+        //const user2 = { name: 'Juan', age: 30, email: 'juan@example.com' };
+        const userWithEmail = { ...user, email: 'juan@example.com', distrito: 'SMP' };
+
+        console.log(userWithEmail); */
+
+    </script>
+</body>
+
+</html>
